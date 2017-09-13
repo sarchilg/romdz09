@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+The manual is easy to start<br><br>
+1. Set java, if no<br>
+2. run the program - click on it<br>
+3. button 'new' find your ROM.<br>
+4. button 'extract' he unpacks ROM.<br>
+5. The next 'get pictures' - A new window will appear. There appeared fingering parts of the ROM, see the different resources.<br>
+----- All buttons have hints , go to the button and its description will appear .....<br>
+<br>
+<br>
+Extract button saves the image in the 'files' folder (in the root directory where  is stored ROM) with the name is the combined selected file name<br>
+and it place (hex offset). It can be edited and put  with the same name. When you import used this file .<br>
+<br>
+Next subtlety. It replaces the original location in the file with the extension .b, where it is compressed by the 'Chinese original algorithm'.<br>
+Therefore, it must be less than the original (but already there). But this is not the whole complexity.
+The fact is that with the extension .b file then again compressed LZMA algorithm<br>
+and than it is written in the ROM. <br>
+Pictures remain separate color table. Therefore, the less colors get the smaller file. Well, the more smooth and repetitive blocks will be better.<br>
+Incidentally repetition reduce the size even in different pictures, if they are in the same file with extension .b.<br>
+<br>
+On the firmware NX9_61D_240_V2_1_ZSX_DZ09_32_T3_L3_C4_G4_B_160512 after exporting the font is issued in the form of one long picture. (Mono-color,  black and background)<br>
+Each letter is placed in the red frame inside it you can edit it as you like (I made a bold). Further imports.<br>
+<br>
+A little bit about what's inside ROM:<br> 
+<br> 
+<h1>&nbsp;ROM</h1><br> 
+the first part (uncompressed)
+                 <br>
+                 <table border=1>
+                 <tr><td>there is usually start animation, background image, (in one ROM font)</td></tr>
+                 </table>
+                 archived parts
+                 <table border=1>
+                 <tr><td></td>
+                 <td></td>
+                 <td colspan="2">button extract in main window</td>
+                 <td>button extract,import</td>
+                 <td>button <br>to file(file .b),<br> to ROM(in memory)</td>
+                 <td>button save in main window</td>
+                 </tr>
+                 <tr><td> xx1.a </td>
+                 <td>here is different pictures, <br> text in different languages</td>
+                 <td>------> cutting <br> ------> files .a </td>
+                 <td>--------> decompression <br> --------> Files .b</td>
+                 <td>already possible (.b file) <br>  import, export and edit <br> resources </td>
+                 <td>Compression back <br> ---------> <br> ---------> files .bc <br> .bc&lt;=.a (size).</td>
+                 <td> record <br>in to ROM</td></tr>
+                 <tr><td>xx2.a</td><td colspan=6>...</td></tr>
+                 <tr><td>xx3.a</td><td colspan=6>...</td></tr>
+                 <tr><td>xx4.a and so on</td><td colspan=6>...</td></tr>
+                 </table>
+                 the last part  (uncompressed)
+                 <table border=1>
+                 <tr><td>...</td></tr>
+                 </table>
+
+</html>
